@@ -75,6 +75,12 @@ I’ve worked on the process & products of over 10 companies during my career in
 
 ---
 
+# Access these Slides online
+
+* https://shiftkey-labs.github.io/ReactNativeCourse/
+
+---
+
 # Reference Page
 
 * https://bit.ly/skrn
