@@ -14,7 +14,7 @@ ShiftKey Labs is located in Mi'kma'ki, the ancestral and unceeded territory of t
 
 # About ShiftKey Labs
 
-* ShiftKey Labs ( https://shiftkeylabs.ca) is a non-profit, part of the Nova Scotia Sandbox project, hosted in the Dalhousie Faculty of Computer Science
+* ShiftKey Labs (https://shiftkeylabs.ca) is a non-profit, part of the Nova Scotia Sandbox project, hosted in the Dalhousie Faculty of Computer Science
 * ShiftKey Labs has 3 primary goals:
 1. Creating strong talent for the Nova Scotia technology industry
 2. Ensuring that computer science students gain innovation and entrepreneurship experience outside the classroom 
@@ -29,6 +29,55 @@ ShiftKey Labs is located in Mi'kma'ki, the ancestral and unceeded territory of t
 3. ShiftKey Academy – Reimbursement up to $150 CAD for approved technical certifications  (AWS, Azure, GCP & more - Dalhousie students only at present) 
 4. ShiftKey Works – Connecting students to part-time work 
 5. ShiftKey Build – Supporting student-led startups with funding, mentorship 
+
+---
+
+# About Allan
+
+* Halifax born and raised
+* Dalhousie Graduate, Bachelor of Computer Science, Minor in Mathematics (2013)
+* Known online for having developed & published a number of indie art apps
+	* Glitch X (2023)
+	* Hyperstream (2020)
+	* Hyperspektiv 2 (2019)
+	* Hyperspektiv (2015)
+	* Glitch Wizard (2014)
+
+---
+
+# About Allan - Interests
+
+* Hockey - I’m a goaltender ❄️
+* Music 🧪
+* Visual Art 🌀
+* Apps ⚡ ️
+* Yoga 🧘
+* Teaching 🌞
+* Longboarding 🏄‍♀️
+
+---
+
+# About Allan - Companies 
+
+I’ve worked on the process & products of over 10 companies during my career including:
+
+* ShiftKey Labs
+* ThinkRad Studios
+* Arcturus
+* Twisted Oak Studios
+* Novonix
+* Within
+* Phantom Force
+* HypeMachine
+* FlyMachine
+* 10xBeta
+* VSCO
+
+---
+
+# Reference Page
+
+* https://bit.ly/skrn
 
 ---
 
@@ -57,8 +106,12 @@ ShiftKey Labs is located in Mi'kma'ki, the ancestral and unceeded territory of t
 
 * SKNotes Course Project App
 * Git & Github
+* NPM & Yarn
+* React Native CLI
+* Running on iOS
+* Running on Android
+* Installing Dependencies & Getting Starter Code
 * Visual Studio Code
-* etc.
 
 ---
 
@@ -180,7 +233,7 @@ ShiftKey Labs is located in Mi'kma'ki, the ancestral and unceeded territory of t
 # Running JS Code (Windows)
 
 * Download nodeJS from https://nodejs.org/en/Download
-* Make a file with the extension (.js) and execute in Console:  
+* Make a file with the extension (.js) and execute in Command Prompt:  
 * node file.js 
 
 ---
@@ -302,40 +355,107 @@ print("hey") // logs "hey" to the console
 
 * In order for a function to give a result, it can do what’s called returning a value
 ```js
-const add2 = (x) => {
-	return x + 2;
+const add = (x, y) => {
+	return x + y;
 }
 
-const y = add2(4);
+const y = add(4, 2);
 console.log(y); // logs 6 to the console
 ```
-* The add2 function takes any given input value and adds 2 to it
-* We can retrieve the returned value by assigning it into a variable at the time when we call the function
+* The add function takes two arguments and adds them together
+* We can retrieve the returned value by assigning it into a variable at the time when we call the function (in this case we assign the value to the variable "y")
 
 ---
 
 # JS Arrays
 
 * Arrays are a way of storing data in a sequence
-* TODO
+* They're declared using square brackets [ ] enclosing a list of elements
+```js
+const a = [1,2,3,4];
+console.log(a[0]); // prints 1
+```
+* Arrays are indexed starting from 0 - so the first element is really the *zeroeth* element 
+* Arrays are useful for keeping the order of a group of elements, Aand can be manipulated with methods like push (add an element to the end) and unshift ( add an element to the beginning)
+* You can also set elements directly by index
+* You can get the # of elements in array using the length property
+```js
+const a = [];
+a.push("a");
+a.push("b");
+a.unshift("c");
+console.log(a);  // prints ['c', 'a', 'b']
+a[1] = "f";
+console.log(a);  // prints ['c', 'f', 'b']
+console.log(a.length); // prints 3
+```
 
 ---
 
 # JS Map
 
-* TODO
+* The map() method in JavaScript applies a given function to each element of an array and returns a new array with the results
+```js
+const a = [1, 2, 3];
+const b = a.map((element, index) => {
+	console.log(index); // prints 0, 1, 2
+	return element * 9;
+})
+console.log(b);  // prints [9, 18, 27]
+```
+* The callback function provided to map() can accept three arguments: the current element being processed, the index of the current element, and the array being traversed
+* It is commonly used to perform tasks such as extracting specific properties from objects in an array or applying a transformation function to each element
 
 ---
 
 # JS Objects
 
-* TODO
+* JavaScript objects are fundamental data structures that store data in key-value pairs, where keys are strings and values can be any data type
+* Objects in JavaScript can be created using object literals, which consist of curly braces {}, or by instantiating with the new Object() constructor
+* Objects can contain properties and methods, where properties are variables attached to the object, and methods are functions that belong to the object and can be called to perform actions or computations
+```js
+const person = {
+	firstName: "Bob",
+	lastName: "Smith",
+	greeting: function() {
+		console.log("hello from " + this.firstName + " " + this.lastName);
+	}
+}
+person.greeting();
+```
+* the "this" keyword refers to the context in which a function is called
+* When a function is called as a method of an object, this refers to that object - hence we can get the firstName and lastName properties in the greeting function
 
 ---
 
 # JS Conditionals - If Statements & Ternary Operator
 
-* TODO
+* Often you want to perform different actions based on the state of the app
+* The trusty if statement is the classic way to do this
+```js
+const decideColor = (x) => {
+	if (x == true) {
+		console.log("Red");
+	} else {
+		console.log("Blue");
+	}
+}
+
+decideColor(true) // prints Red
+decideColor(false) // prints Blue
+```
+* There's also something called the ternary operator which can be used declaratively
+```js
+const decideColor = (x) => {
+	console.log(x == true ? "Red" : "Blue");
+}
+
+decideColor(true) // prints Red
+decideColor(false) // prints Blue
+```
+* The general form of the ternary operator is as follows:
+	* (boolean expression) ? (expression if true) : (expression if false)
+* We'll make use of the ternary operator to conditionally show or hide React Native Components
 
 ---
 
@@ -381,6 +501,30 @@ console.log(y); // logs 6 to the console
 <iframe src="https://snack.expo.dev/embedded/@alavell/react-native-props-example?iframeId=i59wyr3ii3&amp;preview=true&amp;platform=web&amp;theme=light" height="400px" width="100%" frameborder="0" data-snack-iframe="true" style="display: block;"></iframe>
 * Here we define the CustomText component, which accepts “title” as a prop, which it then places in its styled Text component
 * See how we reused one component but got three different results!
+
+---
+
+# JSX map() & JSX Fragments
+
+* map() can be used in JSX to return components - one for each element of the original array. Therefore it's useful for turning data into Views
+```jsx
+const Component = () => {
+	const data = ["a", "b", "c"]
+
+	return <>
+		{
+			data.map((element) => {
+				return <Text>{element}</Text>
+			})
+		}
+	</>
+}
+// creates a Component consisting of three Text elements
+```
+* Notice how we wrapped the data.map in both
+	* curly braces { } 
+	* and with a JSX fragment <> </> - when returning JSX, we want it only to be one component, instead of multiple like you have gotten from map
+		* a JSX Fragment is like a container component that doesn't do anything other than group other components together
 
 ---
 
@@ -524,13 +668,89 @@ setValue(10); // this will cause React Native to re-render and all references to
 
 * Local-only (no data in the cloud) note-taking app with interface inspired by Google Keep
 * Testflight (iOS) and Google Play (Android) links posted in the Discord to download the reference app   
-* Starter React Native project Github link posted in Discord
+* We'll use the React Native CLI to create the project
 
 ---
 
+# NPM & Yarn
 
-# Cloning the Git Repository
-
-* 
+* When you install Node, NPM (Node Package Manager) is automatically installed
+* NPM is used to install packages and execute commands
+* There's a newer package manager, called Yarn, which is a spin-off of NPM and offers the same functionality but in a more robust fashion
+* We'll install yarn so we can use it to manage our React Native proejct
+```
+npm install -g yarn
+```
 
 ---
+
+# React Native CLI
+
+* There are 2 primary options for creating new React Native Apps: Expo and React Native CLI
+* In this course we'll be using React Native CLI
+* In order to get your course project started, run the following command, replacing MyNotes with whatever name you want for your app
+```
+npx react-native@latest init MyNotes
+```
+* This will create a new React Native app
+
+---
+
+# Running on iOS
+
+* Install Cocoapods - package manager for iOS apps
+```
+brew install cocoapods
+```
+* Install Xcode - the latest version can be installed through the MacOS App Store 
+```
+cd MyNotes
+npx pod-install
+```
+* Running this will install all the Cocoapods dependnecies that the project requires to run in Xcode
+* Go to the ios folder, that contains the Xcode project and workspace
+* Open MyNotes.xcworkspace (this is generated by Cocoapods)
+* Choose an iPhone simulator in the top center
+* Click the Arrow button to Run the app
+
+---
+
+# Running on Android 
+
+* Install Android Studio
+* Enable USB Debugging on your Android Device
+	* Go to "Settings -> About phone -> Software Information" and tap on the Build Number row seven times (yes, the magic number)
+
+---
+
+# Dependencies
+
+* In order to simplify the undertaking of the project, we've provided the full dependencies 
+```
+yarn add twrnc react-native-leveldb react-native-uuid @reduxjs/toolkit \
+react-redux @react-native-seoul/masonry-list @react-navigation/native \
+@react-navigation/native-stack react-native-screens react-native-safe-area-context
+```
+* Can find this command at https://bit.ly/skrn under Class Project - Notes App / Dependencies
+
+---
+
+# Starter Files
+
+* We've also included a handful of files to get the project started
+* unzip the file found at https://bit.ly/skrn under Class Project - Notes App / Starter Files into the root folder of your React Native project
+* App.js provides a vanilla starting point for your app
+* You must remove App.tsx in your project, and replace it with the provided App.js - effectively converting the app from using TypeScript to using JavaScript
+* db.js provides a LevelDB-backed database combined with RTKQuery to provide an API for CRUD operations on a local note database
+* store.js configures Redux Toolkit to use RTK Query
+* index.js ensures the App is provided with the Redux Store using Provider
+* Try running your app again now that you've brought in all the dependencies and starter files
+
+---
+
+# Visual Studio Code
+
+- Recommended code editor 
+- Can be downloaded for free at code.visualstudio.com
+- Let's use to make a simple modification to the app
+
