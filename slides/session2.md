@@ -91,7 +91,7 @@ const MyComponent = () => {
 
 ---
 
-# useEffect - Cleaning up on Component Unmount
+# useEffect - Running Code on Component Unmount
 
 * useEffect can also be useful to execute logic when components unmount
 * To do so, return a function from useEffect
