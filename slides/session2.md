@@ -15,11 +15,11 @@ ShiftKey Labs is located in Mi'kma'ki, the ancestral and unceeded territory of t
 # Slides Link
 
 * https://github.com/shiftkey-labs/ReactNativeCourse
-* Contains Sessions 1 and 2
+* Contains Sessions 1, 2 and 3
 * Use arrow keys to move around the presentation
 * Press "esc" to get a zoom-out view and use the arrow keys to move around it, press "space" in this view to choose a slide
 * Direct Link to Session 2 posted in Notion (https://bit.ly/skrn) under Course Slides / Session 2 - https://github.com/shiftkey-labs/ReactNativeCourse/#/62
-* If you don't see Session 2 you may need to force refresh your browser (Command + R on MacOS, Control + R on Windows)
+* If you don't see Session 2 you may need to force refresh your browser (Command + Shift + R on MacOS, Control + Shift + R on Windows)
 
 ---
 
