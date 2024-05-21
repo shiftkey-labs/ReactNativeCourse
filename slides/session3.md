@@ -567,6 +567,11 @@ const MainScreen = () => {
 }
 ```
 * In the MainScreen, useSelector changes - before it was `state => state.counter.value` but now we have to add the keyword `present` which accounts for the undo stack's *current value*
+
+---
+
+# Redux Toolkit - Undo 
+
 ```js
 const MainScreen = () => {
   ...  
