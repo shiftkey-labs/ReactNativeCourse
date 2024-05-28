@@ -261,3 +261,7 @@ const MainScreen = () => {
 * RTK Query instead uses createAPI to define functionality
 * Both of those generate actions and reducers for Redux
 * Redux Toolkit can be enhanced with undo functionality by adding a library and wrapping slices with it
+
+---
+
+# Project Workshop
